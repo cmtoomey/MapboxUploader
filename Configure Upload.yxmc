@@ -1,0 +1,883 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="9.5">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="Text" />
+          </Fields>
+          <Data>
+            <r>
+              <c>cd C:\</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="138" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField field="Script1" type="String" size="64" expression="[Text]" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Script1=[Text]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="Formula: [Text]" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="258" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="True" />
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#5</Connection>
+            <Connection>#2</Connection>
+            <Connection>#3</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="Script1" />
+          </Fields>
+          <Data>
+            <r>
+              <c>npm install --save mapbox-upload</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script1" size="32" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="78" width="324" height="28" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Generate Script</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="402" y="54" width="312" height="64" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Output and Execute Script
+Get Node module
+Create destination file
+Create VBS file</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="Script2" />
+          </Fields>
+          <Data>
+            <r>
+              <c>cd c:\node_modules</c>
+            </r>
+            <r>
+              <c>md shapefiles</c>
+            </r>
+            <r>
+              <c>timeout /t 5</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
+        <Position x="354" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlockUntilDone" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="17" />
+          <Fields>
+            <Field name="Field1" />
+            <Field name="'Script3" />
+          </Fields>
+          <Data>
+            <r>
+              <c />
+              <c>'Get command-line arguments.</c>
+            </r>
+            <r>
+              <c />
+              <c>Set objArgs = WScript.Arguments</c>
+            </r>
+            <r>
+              <c />
+              <c>InputFolder = objArgs(0)</c>
+            </r>
+            <r>
+              <c />
+              <c>ZipFile = objArgs(1)</c>
+            </r>
+            <r>
+              <c />
+              <c />
+            </r>
+            <r>
+              <c />
+              <c>'Create empty ZIP file.</c>
+            </r>
+            <r>
+              <c />
+              <c>CreateObject("Scripting.FileSystemObject").CreateTextFile(ZipFile, True).Write "PK" &amp; Chr(5) &amp; Chr(6) &amp; String(18, vbNullChar)</c>
+            </r>
+            <r>
+              <c />
+              <c />
+            </r>
+            <r>
+              <c />
+              <c>Set objShell = CreateObject("Shell.Application")</c>
+            </r>
+            <r>
+              <c />
+              <c />
+            </r>
+            <r>
+              <c />
+              <c>Set source = objShell.NameSpace(InputFolder).Items</c>
+            </r>
+            <r>
+              <c />
+              <c />
+            </r>
+            <r>
+              <c />
+              <c>objShell.NameSpace(ZipFile).CopyHere(source)</c>
+            </r>
+            <r>
+              <c />
+              <c />
+            </r>
+            <r>
+              <c />
+              <c>'Required!</c>
+            </r>
+            <r>
+              <c />
+              <c>wScript.Sleep 2000</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
+        <Position x="654" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OutputConfiguration>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">%TEMP%\inst_setup_upload.bat</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>\0</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>False</HeaderRow>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+          </OutputConfiguration>
+          <InputConfiguration>
+            <Configuration />
+          </InputConfiguration>
+          <ProgramName>%TEMP%\inst_setup_upload.bat</ProgramName>
+          <Arguments />
+          <WorkingDir />
+          <RunMinimized value="False" />
+          <RunSilent value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Run inst_setup_upload.bat</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunCommand" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="438" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([Script1])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Script1])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="Text" selected="False" />
+            <SelectField field="Script2" selected="False" />
+            <SelectField field="Field1" selected="False" />
+            <SelectField field="'Script3" selected="False" />
+            <SelectField field="Script 4" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="Script2" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="438" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([Script2])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Script2])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
+        <Position x="654" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OutputConfiguration>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">c:\node_modules\shapefile_dir.bat</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>\0</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>False</HeaderRow>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+          </OutputConfiguration>
+          <InputConfiguration>
+            <Configuration />
+          </InputConfiguration>
+          <ProgramName>c:\node_modules\shapefile_dir.bat</ProgramName>
+          <Arguments />
+          <WorkingDir />
+          <RunMinimized value="False" />
+          <RunSilent value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Run shapefile_dir.bat</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunCommand" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="438" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull(['Script3])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull(['Script3])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="'Script3" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="654" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\Public\zip.vbs</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>\0</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>zip.vbs</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="Script 4" />
+          </Fields>
+          <Data>
+            <r>
+              <c>move /y "c:\Users\Public\zip.vbs" "c:\node_modules\zip.vbs"</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="438" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([Script 4])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Script 4])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Text" size="6" source="TextInput:" type="String" />
+            <Field name="Script1" size="64" source="(Multiple Sources)" type="String" />
+            <Field name="Script2" size="18" source="TextInput:" type="String" />
+            <Field name="Field1" source="TextInput:" type="Bool" />
+            <Field name="'Script3" size="126" source="TextInput:" type="V_String" />
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="Script 4" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script 4" size="59" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
+        <Position x="654" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OutputConfiguration>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">%TEMP%\movezip.bat</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>\0</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>False</HeaderRow>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+          </OutputConfiguration>
+          <InputConfiguration>
+            <Configuration />
+          </InputConfiguration>
+          <ProgramName>%TEMP%\movezip.bat</ProgramName>
+          <Arguments />
+          <WorkingDir />
+          <RunMinimized value="False" />
+          <RunSilent value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Run movezip.bat</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunCommand" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="True" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="True" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="True" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="True" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="False" />
+      <Name>Configure Mapbox Upload</Name>
+      <Description>This macro will configure your machine to run the Mapbox Uploader.
+
+It includes setting an environmental variable and then downloading/updating the correct NodeJS package.</Description>
+      <CategoryName />
+      <SearchTags />
+      <Author>Chris Toomey</Author>
+      <Company>Slalom Consulting</Company>
+      <Copyright />
+      <DescriptionLink actual="https://github.com/mapbox/mapbox-upload" displayed="https://github.com/mapbox/mapbox-upload" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (13)</Name>
+          <ToolId value="13" />
+          <Questions />
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImage>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</MacroImage>
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="57" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
