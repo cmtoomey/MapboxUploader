@@ -3,7 +3,7 @@ This is the unofficial Mapbox Uploader Macro for Alteryx.
 
 Using this macro at the end of your workflow will allow you to take all your custom geosptatial data and push it up to Mapbox via their Upload API.
 
-Here's the basics, details and background are on my [blog](https://cmtoomey.github.io/).
+Here's the basics, details and background are on my [blog](https://cmtoomey.github.io/mapping/2015/07/02/mapbox1.html).
 
 ## Step 1 - install NodeJS
 
